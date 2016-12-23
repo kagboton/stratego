@@ -24,7 +24,7 @@ public class Joueur implements Serializable {
         this.pseudoJoueur = pseudo;
         this.mdpJoueur = mdp;
         this.idJoueur = identifiant;
-        this.identifiant++;
+        identifiant++;
         this.couleur = null; //A l'inscription, le n'a pas encore une couleur.
     }
 

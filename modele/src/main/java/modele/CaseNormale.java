@@ -1,14 +1,14 @@
 package modele;
 
 import modele.pieces.Piece;
+import modele.utils.Coordinates;
 
 /**
  * Created by bijou on 20/12/2016.
  */
 public class CaseNormale implements Case{
 
-    private int x;
-    private int y;
+    private Coordinates point;
     private boolean isRiver;
     Piece pieceDansCase;
 
@@ -16,8 +16,8 @@ public class CaseNormale implements Case{
 
     //Constructeur avec des paramètres
     public CaseNormale(int x, int y, boolean isRiver){
-        this.x = x;
-        this.y = y;
+        this.point.x = x;
+        this.point.y = y;
         this.isRiver = isRiver;
     }
 
@@ -26,19 +26,19 @@ public class CaseNormale implements Case{
      */
 
     public int getX() {
-        return x;
+        return this.point.x;
     }
 
     public void setX(int x) {
-        this.x = x;
+        this.point.x = x;
     }
 
     public int getY() {
-        return y;
+        return point.y;
     }
 
     public void setY(int y) {
-        this.y = y;
+        this.point.y = y;
     }
 
     public boolean isRiver() {
@@ -60,9 +60,6 @@ public class CaseNormale implements Case{
 
     @Override
     public boolean caseOccupee() {
-        if(pieceDansCase != null)
-            return true;
-        else
-            return false;
+        return pieceDansCase != null;
     }
 }
