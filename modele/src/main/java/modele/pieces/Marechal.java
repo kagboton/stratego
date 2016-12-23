@@ -7,10 +7,8 @@ import modele.comportements.AttaqueSimple;
  */
 public class Marechal extends Piece{
 
-    private static int force = 10;
-
     public Marechal(){
-        this.setForce(Marechal.force);
+        this.setForce(Piece.MARECHAL);
         this.setModeAttaque(new AttaqueSimple());
     }
 }

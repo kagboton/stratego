@@ -17,11 +17,21 @@ public abstract class Piece {
     public final int SOUTH = 2;
     public final int EAST = 3;
     public final int WEST = 4;
+    public final static int ECLAIREUR = 2;
+    public final static int DEMINEUR = 3;
+    public final static int SPY = 1;
+    public final static int SERGENT = 4;
+    public final static int LIEUTENANT = 5;
+    public final static int CAPITAINE = 6;
+    public final static int COMMANDANT = 7;
+    public final static int COLONEL = 8;
+    public final static int GENERAL = 9;
+    public final static int MARECHAL = 10;
 
     protected int force;
     protected int idJoueur;
     protected Coordinates point;
-    protected int deplacement;
+    protected int deplacement = 1;
 
     //protected Couleur couleur;
     protected Attaque modeAttaque = new AucuneAttaque();
